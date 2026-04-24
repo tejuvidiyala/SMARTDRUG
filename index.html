@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedGuard AI – Smart Drug–Food Interaction</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="main-container">
+
+<header>
+<h1>MedGuard AI</h1>
+<p class="subtitle">Smart Drug-Food Interaction Analyzer</p>
+</header>
+
+<!-- Health Profile Section -->
+<section class="profile-section card">
+<h2>Health Profile</h2>
+<div class="profile-inputs">
+<input type="number" id="ageInput" placeholder="Age">
+<input type="number" id="weightInput" placeholder="Weight (kg)">
+<input type="text" id="allergyInput" placeholder="Allergies (comma separated)">
+</div>
+</section>
+
+<!-- Medicine & Food Input -->
+<section class="interaction-section card">
+<h2>Enter Medicine & Food</h2>
+<div class="input-row">
+<input type="text" id="medicineInput" placeholder="Medicine Name" list="medicineList">
+<input type="text" id="foodInput" placeholder="Food Item" list="foodList">
+<button onclick="analyze()">Analyze</button>
+</div>
+
+<datalist id="medicineList"></datalist>
+<datalist id="foodList"></datalist>
+</section>
+
+<!-- Risk Bar -->
+<section class="risk-section card">
+<h2>Interaction Risk</h2>
+<div class="risk-bar-container">
+<div id="riskBar" class="risk-bar"></div>
+</div>
+</section>
+
+<!-- Results -->
+<section id="analysisResult" class="results-section card"></section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
